@@ -22,3 +22,8 @@
 
 #### Reactor模式
 [Understanding Reactor Pattern: Thread-Based and Event-Driven](https://dzone.com/articles/understanding-reactor-pattern-thread-based-and-eve)
+
+## 分布式架构
+### 分布式架构理论
+[https://aosabook.org/en/v2/distsys.html](https://aosabook.org/en/v2/distsys.html)
+ 
