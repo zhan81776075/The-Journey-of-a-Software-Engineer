@@ -18,10 +18,14 @@
 
 #### 异步IO模型
 ### 网络编程
+#### 网络编程基础
 [C10 Problem](https://en.wikipedia.org/wiki/C10k_problem)
 
 #### Reactor模式
 [Understanding Reactor Pattern: Thread-Based and Event-Driven](https://dzone.com/articles/understanding-reactor-pattern-thread-based-and-eve)
+
+### Unix编程
+#### 共享内存
 
 ## 分布式架构
 ### 分布式架构理论
