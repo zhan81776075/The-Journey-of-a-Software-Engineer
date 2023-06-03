@@ -31,4 +31,7 @@
 ## 分布式架构
 ### 分布式架构理论
 [https://aosabook.org/en/v2/distsys.html](https://aosabook.org/en/v2/distsys.html)
- 
+
+## 语言
+### GO
+[Go语言官方文档](https://go-zh.org/doc/)
