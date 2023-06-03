@@ -13,3 +13,10 @@
 [TCP的那些事儿(上)](https://coolshell.cn/articles/11564.html) 
 
 [TCP的那些事儿(下)](https://coolshell.cn/articles/11609.html)
+
+#### 异步IO模型
+### 网络编程
+[C10 Problem](https://en.wikipedia.org/wiki/C10k_problem)
+
+#### Reactor模式
+[Understanding Reactor Pattern: Thread-Based and Event-Driven](https://dzone.com/articles/understanding-reactor-pattern-thread-based-and-eve)
