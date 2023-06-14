@@ -28,9 +28,10 @@
 ### Unix编程
 #### 共享内存
 
-## 分布式架构
-### 分布式架构理论
+## 分布式系统
+### 分布式系统理论
 [https://aosabook.org/en/v2/distsys.html](https://aosabook.org/en/v2/distsys.html)
+
 [书籍-深入理解分布式系统]()
 
 ## 语言
