@@ -28,6 +28,8 @@
 
 [TCP KEEP-ALIVE和TCP_USER_TIMEOUT机制](https://blog.csdn.net/u014436243/article/details/116856572)
 
+[TCP_USER_TIMEOUT](https://xujianhai.fun/posts/tcp_user_timeout/)
+
 ##### Reactor模式
 [Understanding Reactor Pattern: Thread-Based and Event-Driven](https://dzone.com/articles/understanding-reactor-pattern-thread-based-and-eve)
 
