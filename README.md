@@ -29,7 +29,7 @@
 #### 共享内存
 
 #### 网络编程
-[TCP KEEP-ALIVE和TCP_USER_TIMEOUT机制]([https://aosabook.org/en/v2/distsys.html](https://blog.csdn.net/u014436243/article/details/116856572))
+[TCP KEEP-ALIVE和TCP_USER_TIMEOUT机制](https://blog.csdn.net/u014436243/article/details/116856572)
 
 ## 分布式系统
 ### 分布式系统理论
