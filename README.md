@@ -15,7 +15,7 @@
 
 [TCP的那些事儿(下)](https://coolshell.cn/articles/11609.html)
 
-[TCP/IP笔记](https://github.com/zhan81776075/Learning/blob/main/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/tcpip.md)
+[笔记：TCP/IP](https://github.com/zhan81776075/Learning/blob/main/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/tcpip.md)
 
 #### 异步IO模型
 
@@ -23,7 +23,7 @@
 
 #### 进程间通讯
 ##### 信号量与共享内存
-[UNIX环境高级编程第15章]()
+[笔记：UNIX环境高级编程第15章]()
 
 #### 网络编程
 ##### 网络编程基础
