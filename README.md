@@ -40,6 +40,7 @@
 ### 分布式系统理论
 [The Architecture of Open Source Applications (Volume 2) Scalable Web Architecture and Distributed Systems](https://aosabook.org/en/v2/distsys.html)
 
+[保证分布式系统数据一致性的6种方案](https://cloud.tencent.com/developer/article/1041507)
 ### 参考书籍
 [书籍-深入理解分布式系统](https://github.com/zhan81776075/Learning/tree/main/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E7%90%86%E8%AE%BA)
 
