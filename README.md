@@ -38,12 +38,17 @@
 
 ## 分布式系统
 ### 分布式系统理论
+#### 经典博客
 [The Architecture of Open Source Applications (Volume 2) Scalable Web Architecture and Distributed Systems](https://aosabook.org/en/v2/distsys.html)
 
 [保证分布式系统数据一致性的6种方案](https://cloud.tencent.com/developer/article/1041507)
 
 [Cap理论](https://cloud.tencent.com/developer/article/1860632)
 
+#### 经典书籍
+1. Designing Data Intensive Applications，中文名字叫做数据密集型系统设计
+2. Distributed Systems: Principles and Paradigms，中文名字叫做分布式系统原理与范型
+3. calable Web Architecture and Distributed Systems，中文翻译链接如下：[可拓展的web架构和分布式系统](http://nettee.github.io/posts/2016/Scalable-Web-Architecture-and-Distributed-Systems/)
 ### 消息队列
 [消息队列经典十连问](https://ost.51cto.com/posts/13284)
 
