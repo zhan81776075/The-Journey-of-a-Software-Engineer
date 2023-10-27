@@ -42,6 +42,8 @@
 
 [保证分布式系统数据一致性的6种方案](https://cloud.tencent.com/developer/article/1041507)
 
+[Cap理论](https://cloud.tencent.com/developer/article/1860632]
+
 ### 消息队列
 [消息队列经典十连问](https://ost.51cto.com/posts/13284)
 
