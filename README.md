@@ -52,6 +52,7 @@
 ### 消息队列
 #### 经典博客
 [消息队列经典十连问](https://ost.51cto.com/posts/13284)
+AMQP - [AMQP1.0官方文档](https://www.amqp.org/specification/1.0/amqp-org-download)
 
 ### 参考书籍
 [书籍-深入理解分布式系统](https://github.com/zhan81776075/Learning/tree/main/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E7%90%86%E8%AE%BA)
