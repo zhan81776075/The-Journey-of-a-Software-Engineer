@@ -45,6 +45,8 @@
 
 [Cap理论](https://cloud.tencent.com/developer/article/1860632)
 
+[推荐阅读：分布式系统架构经典资料](https://time.geekbang.org/column/article/2080)
+
 #### 经典书籍
 1. Designing Data Intensive Applications，中文名字叫做数据密集型系统设计
 2. Distributed Systems: Principles and Paradigms，中文名字叫做分布式系统原理与范型
