@@ -50,6 +50,7 @@
 2. Distributed Systems: Principles and Paradigms，中文名字叫做分布式系统原理与范型
 3. calable Web Architecture and Distributed Systems，中文翻译链接如下：[可拓展的web架构和分布式系统](http://nettee.github.io/posts/2016/Scalable-Web-Architecture-and-Distributed-Systems/)
 ### 消息队列
+#### 经典博客
 [消息队列经典十连问](https://ost.51cto.com/posts/13284)
 
 ### 参考书籍
