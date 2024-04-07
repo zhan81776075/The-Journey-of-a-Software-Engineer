@@ -59,3 +59,6 @@
 #### GO相关wiki
 - [Go语言官方文档](https://go-zh.org/doc/)
 - [Go语言博客](https://www.flysnow.org) - 网上找到
+
+### C
+- [volatile关键字](https://www.cnblogs.com/yc_sunniwell/archive/2010/07/14/1777432.html)
