@@ -62,3 +62,5 @@
 
 ### C
 - [volatile关键字](https://www.cnblogs.com/yc_sunniwell/archive/2010/07/14/1777432.html)
+- [unix/Linux-mmap函数](https://cloud.tencent.com/developer/article/1797000)
+- [unix/Linux-mmap函数-MAP_POPULATE](https://blog.yufeng.info/archives/2481)
