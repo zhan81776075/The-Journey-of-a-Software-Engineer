@@ -56,7 +56,7 @@
 #### GO相关wiki
 - [Go语言官方文档](https://go-zh.org/doc/)
 - [Go语言博客](https://www.flysnow.org) - 网上找到
-
+- [Go 语言高性能编程](https://geektutu.com/post/high-performance-go.html)
 ### C
 - [volatile关键字](https://www.cnblogs.com/yc_sunniwell/archive/2010/07/14/1777432.html)
 - [unix/Linux-mmap函数](https://cloud.tencent.com/developer/article/1797000)
