@@ -24,9 +24,9 @@
 
 - [TCP_USER_TIMEOUT](https://xujianhai.fun/posts/tcp_user_timeout/)
 
-##### Reactor模式
-- [Understanding Reactor Pattern: Thread-Based and Event-Driven](https://dzone.com/articles/understanding-reactor-pattern-thread-based-and-eve)
-
+##### 高性能网络编程
+- [Reactor模型-Understanding Reactor Pattern: Thread-Based and Event-Driven](https://dzone.com/articles/understanding-reactor-pattern-thread-based-and-eve)
+- [高性能网络模式：Reactor 和 Proactor](https://www.xiaolincoding.com/os/8_network_system/reactor.html#%E6%BC%94%E8%BF%9B)
 ## 分布式系统
 ### 分布式系统理论
 #### 经典博客
