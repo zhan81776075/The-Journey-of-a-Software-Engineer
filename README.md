@@ -47,6 +47,8 @@
 ### 参考书籍
 - [书籍-深入理解分布式系统](https://github.com/zhan81776075/Learning/tree/main/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E7%90%86%E8%AE%BA)
 
+## 云原生-ServcieMesh
+- [Pattern: Service Mesh](https://philcalcado.com/2017/08/03/pattern_service_mesh.html)
 ## 语言
 ### GO
 #### GO相关wiki
