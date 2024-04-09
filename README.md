@@ -49,6 +49,9 @@
 
 ## 云原生-ServcieMesh
 - [Pattern: Service Mesh](https://philcalcado.com/2017/08/03/pattern_service_mesh.html)
+## 云原生-Kubernetes
+- [Kubernetes官方文档](https://kubernetes.io/zh-cn/docs/concepts/overview/working-with-objects/)
+
 ## 语言
 ### GO
 #### GO相关wiki
