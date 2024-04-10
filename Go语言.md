@@ -35,4 +35,14 @@ var _ Shape = (*Square)(nil)
 ```
 cannot use (*Square)(nil) (type *Square) as type Shape in assignment: *Square does not implement Shape (missing Area method)
 ```
-这样就做到了强验证的方法。时间
+这样就做到了强验证的方法。
+
+### Q: 如何处理好时间
+对于时间来说，这应该是编程中比较复杂的问题了，相信我，时间是一种非常复杂的事（比如《你确信你了解时间吗？》《关于闰秒》等文章）。而且，时间有时区、格式、精度等问题，其复杂度不是一般人能处理的。所以，一定要重用已有的时间处理，而不是自己干。
+在 Go 语言中，你一定要使用 time.Time 和 time.Duration  这两个类型。
+- 在命令行上，flag 通过 time.ParseDuration 支持了 time.Duration。
+- JSON 中的 encoding/json 中也可以把time.Time 编码成 RFC 3339 的格式。
+- 数据库使用的 database/sql 也支持把 DATATIME 或 TIMESTAMP 类型转成 time.Time。
+- YAML 也可以使用 gopkg.in/yaml.v2 支持 time.Time 、time.Duration 和 RFC 3339 格式。
+如果你要和第三方交互，实在没有办法，也请使用 RFC 3339 的格式。
+最后，如果你要做全球化跨时区的应用，一定要把所有服务器和时间全部使用 UTC 时间。
