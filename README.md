@@ -52,6 +52,10 @@
 ## 云原生-Kubernetes
 - [Kubernetes官方文档](https://kubernetes.io/zh-cn/docs/concepts/overview/working-with-objects/)
 
+## 开源-Redis
+### 经典博客
+- [Redis为什么这么快？](https://juejin.cn/post/6978280894704386079)
+
 ## 语言
 ### GO
 #### GO相关wiki
