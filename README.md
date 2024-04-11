@@ -51,14 +51,20 @@
 - [Redis为什么这么快？](https://juejin.cn/post/6978280894704386079)
 
 # 语言
-## GO
-### 1. GO相关wiki
+## 基础理论
+### GO语言
+#### 1. 经典博客
 - [Go语言官方文档](https://go-zh.org/doc/)
 - [Go语言博客](https://www.flysnow.org) - 网上找到
 - [Go 语言高性能编程](https://geektutu.com/post/high-performance-go.html)
 - [Effective Go](https://go.dev/doc/effective_go#allocation_new)
 - [Go error 处理最佳实践](https://mytechshares.com/2021/11/22/go-error-best-practice/)
-## C
+
+#### 2. 经典博客
+- Go语言实战
+- The Go Programming Language
+
+### C语言
 - [volatile关键字](https://www.cnblogs.com/yc_sunniwell/archive/2010/07/14/1777432.html)
 - [unix/Linux-mmap函数](https://cloud.tencent.com/developer/article/1797000)
 - [unix/Linux-mmap函数-MAP_POPULATE](https://blog.yufeng.info/archives/2481)
