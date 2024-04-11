@@ -60,6 +60,7 @@
 - [Go 语言高性能编程](https://geektutu.com/post/high-performance-go.html)
 - [Effective Go](https://go.dev/doc/effective_go#allocation_new)
 - [Go error 处理最佳实践](https://mytechshares.com/2021/11/22/go-error-best-practice/)
+- [Go 服务性能优化-timeout](https://mp.weixin.qq.com/s/jGGCccMOx4s5asG2IXWNMQ)
 
 ### 3.2.2 经典书籍
 - Go语言实战
