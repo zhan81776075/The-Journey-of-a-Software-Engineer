@@ -21,5 +21,5 @@ k-v pairs的key是一个3元组（major，sub，type）。major是保存key的�
 etcd还保留一个辅助内存b树索引，以加速键的范围查询。b树索引中的键是向用户公开的存储的键。值是持久b+树的修改的指针。压缩会删除无用指针。
 
 总的来说，etcd从b树获取修订信息，然后使用修订作为键从b+树中获取值。
-
+(https://etcd.io/docs/v3.5/learning/data_model/)
 #### Q1.1 存储的具体实现是什么
