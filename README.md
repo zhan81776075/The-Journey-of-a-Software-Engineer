@@ -66,7 +66,7 @@
 - [Go error 处理最佳实践](https://mytechshares.com/2021/11/22/go-error-best-practice/)
 - [Go 服务性能优化-timeout](https://mp.weixin.qq.com/s/jGGCccMOx4s5asG2IXWNMQ)
 - [Effective Go中文版](https://learnku.com/docs/effective-go/2020/introduction/6236)
-
+- [Go 语言—数据结构和算法项目推荐](https://learnku.com/articles/59094)
 ### 3.2.2 经典书籍
 - Go语言实战
 - The Go Programming Language
