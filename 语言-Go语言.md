@@ -47,3 +47,14 @@ cannot use (*Square)(nil) (type *Square) as type Shape in assignment: *Square do
 
 如果你要和第三方交互，实在没有办法，也请使用 RFC 3339 的格式。
 最后，如果你要做全球化跨时区的应用，一定要把所有服务器和时间全部使用 UTC 时间。
+
+### Q: Slice的扩容机制是什么
+GO1.17版本及之前
+当新切片需要的容量cap大于两倍扩容的容量，则直接按照新切片需要的容量扩容；
+当原 slice 容量 < 1024 的时候，新 slice 容量变成原来的 2 倍；
+当原 slice 容量 > 1024，进入一个循环，每次容量变成原来的1.25倍,直到大于期望容量。
+
+GO1.18之后
+当新切片需要的容量cap大于两倍扩容的容量，则直接按照新切片需要的容量扩容；
+当原 slice 容量 < threshold 的时候，新 slice 容量变成原来的 2 倍；
+当原 slice 容量 > threshold，进入一个循环，每次容量增加（旧容量+3*threshold）/4。
