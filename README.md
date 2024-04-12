@@ -43,6 +43,8 @@
 ### 1.3.1 ServcieMesh
 - [Pattern: Service Mesh](https://philcalcado.com/2017/08/03/pattern_service_mesh.html)
 
+## 1.4 基础理论-数据结构与算法
+
 # 2. 开源应用
 ## 2.1 编排-Kubernetes
 - [Kubernetes官方文档](https://kubernetes.io/zh-cn/docs/concepts/overview/working-with-objects/)
