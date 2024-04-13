@@ -1,7 +1,8 @@
 ## Go语言概念目录
 
 ## Go语言基础
-### 切片的用法
+### Part: Map
+- [Go入门指南-map](https://learnku.com/docs/the-way-to-go/8-chapters/3618)
 
 
 ## Go语言问题
