@@ -3,7 +3,8 @@
 ## Go语言基础
 ### Part: Map
 - [Go入门指南-map](https://learnku.com/docs/the-way-to-go/8-chapters/3618)
-
+### Part: Slice
+- [Go入门指南-slice](https://learnku.com/docs/the-way-to-go/chapter-description/3611)
 
 ## Go语言问题
 
