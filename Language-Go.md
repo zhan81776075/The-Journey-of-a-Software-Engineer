@@ -5,14 +5,15 @@
 - [Go入门指南-map](https://learnku.com/docs/the-way-to-go/8-chapters/3618)
 ### Part: Slice
 - [Go入门指南-slice](https://learnku.com/docs/the-way-to-go/chapter-description/3611)
+- [Go语言高性能编程-切片(slice)性能及陷阱](https://geektutu.com/post/hpg-slice.html)
+- [GoWiki-SliceTricks](https://go.dev/wiki/SliceTricks)
+- [GoWiki-SliceTricks-Picture](https://ueokande.github.io/go-slice-tricks/)
 
 ## Go语言问题
 
 ### Q: Go语言中的数组和C语言的数组的区别是什么，优劣势是什么？
 
 ### Q: Go语言的优劣势是什么? 比起C语言呢? 比起Java语言呢?
-
-### Q: 切片的好处是什么? 主要引用场景呢?
 
 ### Q: 如何进行接口完整性检查
 Go 语言的编译器并没有严格检查一个对象是否实现了某接口所有的接口方法，如下面这个示例：
