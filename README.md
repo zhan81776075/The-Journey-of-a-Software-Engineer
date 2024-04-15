@@ -60,9 +60,6 @@
 ### 2.3.1 博客
 - [ETCD官方文档](https://etcd.io/docs/v3.5/demo/)
 
-## 2.4 istio
-
-## 2.5 zookeeper
 # 3. 语言
 ## 3.1 基础理论
 ## 3.2 Go语言
