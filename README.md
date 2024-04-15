@@ -48,16 +48,18 @@
 ## 1.4 基础理论-数据结构与算法
 
 # 2. 开源应用
-## 2.1 编排-Kubernetes
+## 2.1 Kubernetes
 - [Kubernetes官方文档](https://kubernetes.io/zh-cn/docs/concepts/overview/working-with-objects/)
 
-## 2.2 分布式缓存-Redis
+## 2.2 Redis
 ### 2.2.1 经典博客
 - [Redis为什么这么快？](https://juejin.cn/post/6978280894704386079)
 
-## 2.3 分布式数据库-ETCD
+## 2.3 ETCD
 ### 2.3.1 博客
 - [ETCD官方文档](https://etcd.io/docs/v3.5/demo/)
+
+## 2.4 istio
 
 # 3. 语言
 ## 3.1 基础理论
