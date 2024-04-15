@@ -26,6 +26,7 @@
 - [保证分布式系统数据一致性的6种方案](https://cloud.tencent.com/developer/article/1041507)
 - [Cap理论](https://cloud.tencent.com/developer/article/1860632)
 - [推荐阅读：分布式系统架构经典资料](https://time.geekbang.org/column/article/2080)
+- [Raft论文](https://github.com/maemual/raft-zh_cn/blob/master/raft-zh_cn.md)
 
 #### 1.2.1.2 经典书籍
 - Designing Data Intensive Applications，中文名字叫做数据密集型系统设计
