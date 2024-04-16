@@ -1,4 +1,9 @@
-## Q1： ETCD存储是如何设计的?
+# ETCD基础
+## Raft
+- [Raft论文](https://github.com/maemual/raft-zh_cn/blob/master/raft-zh_cn.md)
+
+# ETCD问题
+## Q： ETCD存储是如何设计的?
 
 etcd设计用于可靠地存储不经常更新的数据并提供可靠的观察查询。etcd公开了键值对的先前版本，以支持廉价的快照和观察历史事件（“时间旅行查询”）。持久的、多版本的、并发控制的数据模型非常适用于这些用例。
 
@@ -23,4 +28,4 @@ etcd还保留一个辅助内存b树索引，以加速键的范围查询。b树�
 总的来说，etcd从b树获取修订信息，然后使用修订作为键从b+树中获取值。
 
 (https://etcd.io/docs/v3.5/learning/data_model/)
-### Q1.1 存储的具体实现是什么
+### Q1 存储的具体实现是什么
