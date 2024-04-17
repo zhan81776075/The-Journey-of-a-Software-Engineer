@@ -73,4 +73,10 @@ Raft算法是一个著名的复制日志的一致性算法，用于管理日志�
 
 拜占庭将军容错问题可以参考链接(https://yeasy.gitbook.io/blockchain_guide/04_distributed_system/bft)
 
-后续的算法基本上是基于“实用拜占庭容错算法”（Practical Byzantine Fault Tolerance，PBFT） 算法进行的优化和演进
+后续的算法基本上是基于“实用拜占庭容错算法”（Practical Byzantine Fault Tolerance，PBFT） 算法进行的优化和演进, 其中Raft和paxos算法就是典型的非拜占庭容错算法
+
+## Q: 分布式系统解决了什么问题？
+
+## Q: 当今分布式系统面临的挑战是什么？
+分布式系统的八大谬论如下：
+
