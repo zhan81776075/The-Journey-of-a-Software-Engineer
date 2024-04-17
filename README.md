@@ -33,6 +33,7 @@
 - Distributed Systems: Principles and Paradigms，中文名字叫做分布式系统原理与范型
 - calable Web Architecture and Distributed Systems，中文翻译链接如下：[可拓展的web架构和分布式系统](http://nettee.github.io/posts/2016/Scalable-Web-Architecture-and-Distributed-Systems/)
 - [书籍-深入理解分布式系统](https://github.com/zhan81776075/Learning/tree/main/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F%E7%90%86%E8%AE%BA)
+- [区块链技术指南-分布式系统核心技术](https://yeasy.gitbook.io/blockchain_guide/04_distributed_system/bft)
 
 ### 1.2.2 消息队列理论
 ####  1.2.2.1 经典博客
