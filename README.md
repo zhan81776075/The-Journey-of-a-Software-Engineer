@@ -45,6 +45,9 @@
 ### 1.3.1 ServiceMesh
 - [Pattern: Service Mesh](https://philcalcado.com/2017/08/03/pattern_service_mesh.html)
 
+#### 1.3.1.1 经典书籍
+- [深入理解Istio：云原生服务网格进阶实战]()
+
 ### 1.3.2 ServiceLess
 
 ## 1.4 基础理论-数据结构与算法
