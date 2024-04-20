@@ -1,7 +1,10 @@
 # AMQP论文总结
-### Introduction
-### Tr
+## Introduction
+## Transport
+AMQP网络是由通过link连接的Node组成，Nodes是具有命名的实体，负责安全存储(Safe storage)和传递消息（delivery message）。message可以通过node发送，终止或者传递。
+Link是连接两个node的单向通道(unidirectional route)。
 
+# AMQP问题
 ## Q: AMQP协议的目标是什么?
 AMQP是用于业务消息传递的Internet协议
 
