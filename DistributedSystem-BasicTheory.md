@@ -167,3 +167,10 @@ Leader提交状态机后crash导致客户端重试会导致客户端重新提交
 ## Q: Raft算法日志压缩的关键点是什么？
 
 ## Q: Raft算法什么场景下需要witnesses节点？
+
+## Q：分布式共识和分布式事务的区别？
+参考：
+1. Chatgpt：分布式共识和分布式事务的区别？
+2. 分布式事务(2PC) vs 共识协议(Paxos/raft) [https://blog.csdn.net/flynetcn/article/details/124179754]
+3. DDIA：共识协议和分布式事务有什么关系？[https://cloud.tencent.com/developer/article/2367461]
+4. 知乎：分布式共识和分布式事务的区别？[https://www.zhihu.com/question/388155097]
