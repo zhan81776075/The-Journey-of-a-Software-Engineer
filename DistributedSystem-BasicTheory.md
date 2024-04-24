@@ -165,3 +165,5 @@ Leader提交状态机后crash导致客户端重试会导致客户端重新提交
 ## Q: Raft算法的Learner是什么？作用是什么？
 
 ## Q: Raft算法日志压缩的关键点是什么？
+
+## Q: Raft算法什么场景下需要witnesses节点？
