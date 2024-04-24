@@ -77,7 +77,6 @@ Raft算法是一个著名的复制日志的一致性算法，用于管理日志�
 
 ## Q: 分布式系统解决了什么问题？
 
-
 ## Q: 当今分布式系统面临的挑战是什么？
 分布式系统的八大谬论如下：
 
@@ -143,6 +142,14 @@ Raft算法是一个著名的复制日志的一致性算法，用于管理日志�
 
 ## Q：分布式算法中的安全性(safety)和活性(liveness)是什么?
 
+## Q：分布式共识和分布式事务的区别？
+参考：
+1. Chatgpt：分布式共识和分布式事务的区别？
+2. 分布式事务(2PC) vs 共识协议(Paxos/raft) [https://blog.csdn.net/flynetcn/article/details/124179754]
+3. DDIA：共识协议和分布式事务有什么关系？[https://cloud.tencent.com/developer/article/2367461]
+4. 知乎：分布式共识和分布式事务的区别？[https://www.zhihu.com/question/388155097]
+
+# Raft
 ## Q: Raft算法如何解决follower日志不一致问题？
 
 ## Q：Raft算法如何解决网络分区导致的双主问题？如何解决客户端访问错误leader导致的一致性问题？
@@ -167,10 +174,3 @@ Leader提交状态机后crash导致客户端重试会导致客户端重新提交
 ## Q: Raft算法日志压缩的关键点是什么？
 
 ## Q: Raft算法什么场景下需要witnesses节点？
-
-## Q：分布式共识和分布式事务的区别？
-参考：
-1. Chatgpt：分布式共识和分布式事务的区别？
-2. 分布式事务(2PC) vs 共识协议(Paxos/raft) [https://blog.csdn.net/flynetcn/article/details/124179754]
-3. DDIA：共识协议和分布式事务有什么关系？[https://cloud.tencent.com/developer/article/2367461]
-4. 知乎：分布式共识和分布式事务的区别？[https://www.zhihu.com/question/388155097]
