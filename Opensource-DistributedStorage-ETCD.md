@@ -1,6 +1,4 @@
 # ETCD基础
-## Part: Raft
-- [Raft论文](https://github.com/maemual/raft-zh_cn/blob/master/raft-zh_cn.md)
 
 # ETCD问题
 ## Q： ETCD存储是如何设计的?
@@ -30,3 +28,4 @@ etcd还保留一个辅助内存b树索引，以加速键的范围查询。b树�
 (https://etcd.io/docs/v3.5/learning/data_model/)
 ### Q1 存储的具体实现是什么
 
+## Q：ETCD-RAFT的migrate的实现方案是什么？
