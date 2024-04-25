@@ -60,6 +60,9 @@ Connection需要支持超时关闭，关闭超时的阈值在open frame里面设
 
 ### 2.4.7	Connection State Diagram
 The graph below depicts a complete state diagram for each endpoint. The boxes represent states, and the arrows represent state transitions. Each arrow is labeled with the action that triggers that particular transition.
+![image](https://github.com/zhan81776075/The-Journey-of-a-Software-Engineer/assets/39268323/2b3aaa73-5c92-48d8-8814-39383115b7f3)
+
+![image](https://github.com/zhan81776075/The-Journey-of-a-Software-Engineer/assets/39268323/b2adb550-674e-4189-a400-bd5b5f8d7d9c)
 
 
 # AMQP问题
