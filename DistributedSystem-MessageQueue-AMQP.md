@@ -31,6 +31,16 @@ Channel是单向的，因此在每个Connection Endpoint，incoming和outgoing C
 可能存在两个端点出于各自的原因同时Close Connection。在这种情况下，从每个endpoint的角度来看，唯一可观察到的潜在差异就是表示关闭原因的代码。
 ![image](https://github.com/zhan81776075/The-Journey-of-a-Software-Engineer/assets/39268323/c68c5d7b-1d72-4d9f-a350-91b0b53bcc08)
 
+### 2.4.5	Idle Time Out Of A Connection
+Connection需要支持超时关闭，关闭超时的阈值在open frame里面设置。
+
+空闲超时的使用是对任何网络协议级控制的补充。实施方案应尽可能使用 TCP keep-alive。
+
+如果对等方需要满足发送流量的需要以防止空闲超时，但又没有东西要发送，那么它可以发送一个空帧，即一个只包含帧头而没有帧体的帧。该帧的信道可以是信道最大值以内的任何有效信道，否则将被忽略。实现者应使用通道 0 来处理空帧，如果尚未协商通道最大值（即在接收到开放帧之前），则必须使用通道 0。除此以外，空帧没有任何意义。
+空帧只能在发送开放帧之后发送。由于空帧是一个帧，因此不应在关闭帧发送后发送。
+
+如果在操作过程中，peer超过了远程peer的空闲超时阈值（比如网络负载过重），那么它应该通过使用带有错误说明的关闭帧来优雅地关闭连接。
+
 
 # AMQP问题
 ## Q: AMQP协议的目标是什么?
