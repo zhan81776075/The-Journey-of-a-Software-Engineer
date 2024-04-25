@@ -41,6 +41,26 @@ Connection需要支持超时关闭，关闭超时的阈值在open frame里面设
 
 如果在操作过程中，peer超过了远程peer的空闲超时阈值（比如网络负载过重），那么它应该通过使用带有错误说明的关闭帧来优雅地关闭连接。
 
+### 2.4.6	Connection States
+| Connection States      | Description |
+| ----------- | ----------- |
+| START       | In this state a Connection exists, but nothing has been sent or received. This is the state an implementation would be in immediately after performing a socket connect or socket accept.       |
+| HDR RCVD    | In this state the Connection header has been received from our peer, but we have not yet sent anything.        |
+| HDR SENT    | In this state the Connection header has been sent to our peer, but we have not yet received anything.        |
+| OPEN PIPE   | In this state we have sent both the Connection header and the open frame, but we have not yet received anything.        |
+| OC PIPE     | In this state we have sent the Connection header, the open frame, any pipelined Connection traffic, and the close frame, but we have not yet received anything.       |
+| OPEN RCVD   | In this state we have sent and received the Connection header, and received an open frame from our peer, but have not yet sent an open frame. |
+| OPEN SENT   | In this state we have sent and received the Connection header, and sent an open frame to our peer, but have not yet received an open frame.        |
+| CLOSE PIPE  | In this state we have send and received the Connection header, sent an open frame, any pipelined Connection traffic, and the close frame, but we have not yet received an open frame.       |
+| OPENED      | In this state the Connection header and the open frame have both been sent and received.       |
+| CLOSE RCVD  | In this state we have received a close frame indicating that our partner has initiated a close. This means we will never have to read anything more from this Connection, however we can continue to write frames onto the Connection. If desired, an implementation could do a TCP half-close at this point to shutdown the read side of the Connection.       |
+| CLOSE SENT  | In this state we have sent a close frame to our partner. It is illegal to write any- thing more onto the Connection, however there may still be incoming frames. If desired, an implementation could do a TCP half-close at this point to shutdown the write side of the Connection.      |
+| DISCARDING  | The DISCARDING state is a variant of the CLOSE SENT state where the close is triggered by an error. In this case any incoming frames on the connec- tion MUST be silently discarded until the peer’s close frame is received.        |
+| END         | In this state it is illegal for either endpoint to write anything more onto the Connection. The Connection may be safely closed and discarded.        |
+
+### 2.4.7	Connection State Diagram
+The graph below depicts a complete state diagram for each endpoint. The boxes represent states, and the arrows represent state transitions. Each arrow is labeled with the action that triggers that particular transition.
+
 
 # AMQP问题
 ## Q: AMQP协议的目标是什么?
