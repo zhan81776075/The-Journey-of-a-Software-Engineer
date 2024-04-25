@@ -227,11 +227,11 @@ Leader提交状态机后crash导致客户端重试会导致客户端重新提交
 ## Q：Raft算法Pre-vote机制导致下图场景下的活性问题，如何解决？
 ![pre-vote极端情况](Image/2.jpg)
 
-## Q: Raft算法的Learner是什么？作用是什么？
+## Q：Raft算法的Learner是什么？作用是什么？
 
-## Q: Raft算法日志压缩的关键点是什么？
+## Q：Raft算法日志压缩的关键点是什么？
 
-## Q: Raft算法什么场景下需要witnesses节点？
+## Q：Raft算法什么场景下需要witnesses节点？
 
 ## Q：Raft算法Linearizable语义如何理解？如何解决脏读问题？
 
