@@ -15,7 +15,17 @@ Channel是单向的，因此在每个Connection Endpoint，incoming和outgoing C
 
 虽然严格来说，begin or end frame不是针对Connection Endpoint的，但Connection Endpoint截获这些frame可能很有用，因为这些报文是session标记特定channel上通信开始和结束的方式（请参阅第 2.5 节session）。
 
-### 2.4.1
+### 2.4.1	Opening A Connection
+每个 AMQP Connection在开始其它的报文发送之前, 会通过open frame来描述这条connect的能力和限制(如MIN-MAX-FRAME-SIZE，MAX-CHANNEL-NUM), 因此，open frame只能在0号channel进行，双方在收到open Frame之后开始加入下一个状态。
+![image](https://github.com/zhan81776075/The-Journey-of-a-Software-Engineer/assets/39268323/181030b5-533c-4e2b-a762-c4b84e598548)
+
+### 2.4.2	Pipelined Open
+对于使用许多short-lived的app来说，可能需要将连接协商过程管道化(pipeline the Connection negotiation process)。这种情况只要后续的报文满足这对connect的capabilities and limitations即可。
+![image](https://github.com/zhan81776075/The-Journey-of-a-Software-Engineer/assets/39268323/a25610d2-773e-4d4e-b4d3-c4505cb41e31)
+
+### 2.4.3	Closing A Connection
+
+
 # AMQP问题
 ## Q: AMQP协议的目标是什么?
 AMQP是用于业务消息传递的Internet协议
