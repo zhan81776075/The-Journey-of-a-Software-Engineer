@@ -150,6 +150,9 @@ Raft算法是一个著名的复制日志的一致性算法，用于管理日志�
 4. 知乎：分布式共识和分布式事务的区别？[https://www.zhihu.com/question/388155097]
 
 # Raft
+## Part: Raft论文
+- [Raft论文](https://github.com/maemual/raft-zh_cn/blob/master/raft-zh_cn.md)
+
 ## Q：Raft算法，commitIndex和lastApplied分别是什么意思，有什么区别
 Raft算法是一个用于分布式系统的共识算法，其核心目标是确保分布式系统的一致性。在Raft算法中，commitIndex和lastApplied是两个关键的状态变量，它们各自有着不同的意义。
 
@@ -235,4 +238,27 @@ Leader提交状态机后crash导致客户端重试会导致客户端重新提交
 
 ## Q：Raft算法Linearizable语义如何理解？如何解决脏读问题？
 
-## 
+## Q：Raft算法不存在拜占庭故障问题，为什么？
+
+## Q：Raft算法是如何保证Leader变换时的log一致性问题？
+
+## Q：Raft算法为什么说Log日志一定要持久化？不持久化的后果是什么？
+若半数以上节点复位拉起，则不存在log在半数以上的节点上已Commit，则此时的Raft算法的特性则不成立。会导致数据丢失，此时的Raft算法对应的分布式系统就失去了强一致性。
+
+### Q1：半数节点以上复位且数据丢失，剩余的Leader或者节点是否能成功升主？
+
+## Q：Raft算法如何解决Leader已经Commit但是follower尚未commit时，Leader Crash后数据不丢失的情况？
+
+## Q：Raft算法如何在运行时生产快照？
+
+参考:
+1. 深入理解分布式系统-4.8.16
+
+## Q：Raft算法-快照存储需要注意什么？
+(1) 保存和加载快照
+(2) 传输快照
+(3) 消除不安全的日志访问和丢弃日志条目
+(4) 写时复制的缺点和其它解决方案
+
+参考:
+1. 深入理解分布式系统-4.8.17
