@@ -1,6 +1,7 @@
 # AMQP论文总结
 ## Introduction
 ## Transport
+### 2.1 Transport
 AMQP网络是由通过linkConnection的Node组成，Nodes是具有命名的实体，负责安全存储(Safe storage)和传递消息（delivery message）。message可以通过node发送，终止或者传递。
 
 Link是Connection两个node的单向Channel(unidirectional route)。Link在TerminusConnection到Node。Terminus有两种： Sources and Targets。Terminus负责跟踪特定incoming或outgoing信息流的状态。Sources跟踪outgoing的信息，targets跟踪incoming的信息。报文只有在满足源站的输入标准后才能沿着Link传送。
@@ -22,7 +23,13 @@ Container通过Connection进行通信。AMQP Connection由全双工、可靠有�
 AMQP Sessions将两个单向Channel关联起来，形成两个Container之间的双向顺序转换。两个Container之间的双向顺序转换。单个Connection可同时有多个独立的Sessions处于活动状态，最多可达协商的Channel上限。Connection和Session都被每个对等端点建模为端点，这些端点存储有关Connection或Session的本地状态和最后已知的远程状态。
 ![image](https://github.com/zhan81776075/The-Journey-of-a-Software-Engineer/assets/39268323/93babcab-dd92-44e4-9002-a2abd56a06d7)
 
+Session为 "源 "和 "目标 "之间的通信提供了上下文。LinkEndpoint将Terminus与SessionEndpoint关联起来。在Session中，Link Protocol用于在源和目标之间建立Link，并在它们之间传输信息。一个Session可以同时与任意数量的Link相关联。
+![image](https://github.com/zhan81776075/The-Journey-of-a-Software-Engineer/assets/39268323/5e97e5a4-7477-400d-9365-c0362e4e5e8c)
 
+Frame是有网络传输的基本传输单元。Connection有一个协商的最大Frame大小，允许将字节流轻松碎片化为完整的Frame体，
+
+下表列出了所有Frame体，并定义了处理它们的端点。
+![image](https://github.com/zhan81776075/The-Journey-of-a-Software-Engineer/assets/39268323/ee424c41-5132-4ea9-ad1b-7077395c589f)
 
 ### 2.4 Connections
 AMQP Connections分为多个单向Channels。一个Connection Endpoint包含两种Channel endpoints：incoming and outgoing。Connection Endpoint会根据incoming Channel number，将除了open和close之外的incoming Frames映射到incoming Channel endpoint，并中继由outgoing Channel endpoints产生的Frame，在发送之前用相关的outgoing Channel Number标记这些Frame。
