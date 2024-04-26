@@ -6,9 +6,11 @@ AMQP网络是由通过linkConnection的Node组成，Nodes是具有命名的实�
 Link是Connection两个node的单向Channel(unidirectional route)。Link在TerminusConnection到Node。Terminus有两种： Sources and Targets。Terminus负责跟踪特定incoming或outgoing信息流的状态。Sources跟踪outgoing的信息，targets跟踪incoming的信息。报文只有在满足源站的输入标准后才能沿着Link传送。
 
 当消息在AMQP Network中传输时，安全存储(Safe storage)和传递消息（delivery message）的责任会在遇到的Node之间转移。Link protocol管理源和目标之间的责任转移。
+
 ![image](https://github.com/zhan81776075/The-Journey-of-a-Software-Engineer/assets/39268323/73ad4ef7-5df1-43fd-a4d7-85c08ced1e00)
 
 Node存在于Container中，每个Container可容纳多个Node。AMQP Node的例子包括生产者（Producers）、消费者（Consumer）和队列（Queues）。生产者和消费者是客户端应用程序中生成和处理信息的元素。队列是 Broker 中存储和转发消息的实体。代理和客户端应用程序就是Container的例子。
+
 ![image](https://github.com/zhan81776075/The-Journey-of-a-Software-Engineer/assets/39268323/4d92a051-ed43-4f05-b54d-44df926b2339)
 
 AMQP 传输规范（AMQP Transport Specification）定义了在 AMQP 网络中Node间传输消息的点对点协议。该规范的这一部分不涉及任何Node的内部运作，只涉及将消息从一个Node明确传输到另一个Node的机制。
