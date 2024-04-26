@@ -66,12 +66,16 @@ The graph below depicts a complete state diagram for each endpoint. The boxes re
 
 ## 2.5 Sessions
 Session是两个Containers之间的双向顺序对话(bidirectional sequential conversation)，为相关Links提供分组。Session是Link通信的上下文。一个给定的Session可以连接任意数量、任意方向的Link。不过，一个Link一次最多只能连接到一个Session。
+
 Link上传输的信息在Session中按顺序标识。Session可被视为Link流量的复用，就像connection复用Session流量一样。不过，与connection上的Session不同，Session上的Link并非完全独立，因为它们共享一个适用于Session的共同传输序列（common delivery sequence）。这种共同序列允许endpoints有效地引用交付集(sets of deliveries regardless)，而不考虑源Link。当一个应用程序通过大量不同的Link接收信息时，这一点尤为重要。在这种情况下，Session可将原本独立的Link聚合为一个流，接收应用程序可有效地确认该流。
+
 ![image](https://github.com/zhan81776075/The-Journey-of-a-Software-Engineer/assets/39268323/3b8d965d-056c-446f-89a4-f3dffc1fc032)
 
 ### 2.5.1	Establishing A Session
 建立Sessions的方法是创建一个SessionsEndpoint，将其分配给一个未使用的Channel编号，然后发送一个 begin，宣布SessionsEndpoint与传出Channel的关联。Remote Partner收到 begin 后，会检查远程Channel字段，发现该字段为空。这表明 begin 指的是远程发起的Sessions。因此，伙伴将为远程启动的Sessions分配一个未使用的outging Channel，并通过发送自己的 begin 将remote-channe字段设置为远程启动的Sessions的incoming channel表明这一点。
+
 为便于监控 AMQP Sessions，建议实施方案始终分配可用的最低未用channel号。
+
 对于本地发起的Sessions，begin 帧的远程Channel字段必须为空，而在宣布远程发起的Sessions所创建的Endpoint时，必须设置远程Channel字段。
 ![image](https://github.com/zhan81776075/The-Journey-of-a-Software-Engineer/assets/39268323/df403950-2031-4bcb-9170-19b22ada2de7)
 
