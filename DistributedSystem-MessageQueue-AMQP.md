@@ -45,6 +45,7 @@ Channel是单向的，因此在每个Connection Endpoint，incoming和outgoing C
 
 ### 2.4.3	Closing A Connection
 在关闭Connection之前，每个peer都必须写入一个close frame。在写入后，peer应当在合理的时间内继续处理connection中的数据，直到收到了peer的close frame(或在合理的超时时间后关闭)。虽然close frame可以在任意一个channel上发送，但是依然建议在0号channel上面发送(如果是pipline形式，则必须是0号channel)。
+
 ![image](https://github.com/zhan81776075/The-Journey-of-a-Software-Engineer/assets/39268323/07aada56-a8d3-46e4-a5eb-06120fc3c7f8)
 
 ### 2.4.4	Simultaneous Close
