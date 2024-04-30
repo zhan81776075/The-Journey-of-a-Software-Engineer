@@ -108,7 +108,34 @@ Link上传输的信息在Session中按顺序标识。Session可被视为Link流�
 对于本地发起的Sessions，begin Frame的远程Channel字段必须为空，而在宣布远程发起的Sessions所创建的Endpoint时，必须设置远程Channel字段。
 ![image](https://github.com/zhan81776075/The-Journey-of-a-Software-Engineer/assets/39268323/df403950-2031-4bcb-9170-19b22ada2de7)
 
+### 2.5.2 Ending A Session
+Session在Connection关闭或中断时自动结束。Session在任一端点选择结束Session时明确结束。当Session明确结束时，会发送一个结束帧，宣布endpoint与其outgoing channel解除关联，并在相关情况下携带错误信息。
+![image](https://github.com/zhan81776075/The-Journey-of-a-Software-Engineer/assets/39268323/93919ef0-0d01-4b16-94d5-7fbf06621c39)
 
+(1) At this point the session endpoint is disassociated from the outgoing channel on A, and the incoming channel on B.
+(2) At this point the session endpoint is disassociated from the outgoing channel on B, and the incoming channel on A.
+
+### 2.5.3 Simultaneous End
+由于Session可能是异步的，因此两个peer有可能同时决定结束session。如果出现这种情况，在每个peer看来，其伙伴(their partner)自发启动的结束帧实际上是对等方初始结束帧的应答。
+![image](https://github.com/zhan81776075/The-Journey-of-a-Software-Engineer/assets/39268323/d01217e0-b03a-4a3c-bebd-46420ee2e6cd)
+
+### 2.5.4 Session Errors
+当Session无法处理输入时，它必须发出带有适当错误信息的结束帧（END）来说明问题的原因。然后，Session必须丢弃所有remote endpoint传入的帧，直到听到remote endpoint相应的结束帧。
+![image](https://github.com/zhan81776075/The-Journey-of-a-Software-Engineer/assets/39268323/d19d863f-06d5-4b4d-8842-75a8377f46be)
+
+### 2.5.5 Session States
+| Session States      | Description |
+| ----------- | ----------- |
+| UNMAPPED    | In the UNMAPPED state, the Session endpoint is not mapped to any incoming or outgoing channels on the Connection endpoint. In this state an endpoint cannot send or receive frames. |
+| BEGIN SENT  | In the BEGIN SENT state, the Session endpoint is assigned an outgoing channel number, but there is no entry in the incoming channel map. In this state the endpoint may send frames but cannot receive them. |
+| BEGIN RCVD  | In the BEGIN RCVD state, the Session endpoint has an entry in the incoming channel map, but has not yet been assigned an outgoing channel number. The endpoint may receive frames, but cannot send them. |
+| MAPPED      | In the MAPPED state, the Session endpoint has both an outgoing channel number and an entry in the incoming channel map. The endpoint may both send and receive frames.|
+| END SENT    | In the END SENT state, the Session endpoint has an entry in the incoming channel map, but is no longer assigned an outgoing channel number. The endpoint may receive frames, but cannot send them. |
+| END RCVD    | In the END RCVD state, the Session endpoint is assigned an outgoing channel number, but there is no entry in the incoming channel map. The endpoint may send frames, but cannot receive them. |
+| DISCARDING   | The DISCARDING state is a variant of the END SENT state where the end is triggered by an error. In this case any incoming frames on the session MUST be silently discarded until the peer’s end frame is received. |
+![image](https://github.com/zhan81776075/The-Journey-of-a-Software-Engineer/assets/39268323/176ce085-0a9a-476f-89c6-eeb5eb07363b)
+
+当Session端点处于 UNMAPPED 状态时，没有义务保留该Session endpoint，即 UNMAPPED 状态等同于NONEXISTENT状态。
 
 # AMQP问题
 ## Q: AMQP协议的目标是什么?
