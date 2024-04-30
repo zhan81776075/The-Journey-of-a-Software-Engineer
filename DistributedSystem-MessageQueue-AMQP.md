@@ -106,10 +106,12 @@ Link上传输的信息在Session中按顺序标识。Session可被视为Link流�
 为便于监控 AMQP Sessions，建议实施方案始终分配可用的最低未用channel号。
 
 对于本地发起的Sessions，begin Frame的远程Channel字段必须为空，而在宣布远程发起的Sessions所创建的Endpoint时，必须设置远程Channel字段。
+
 ![image](https://github.com/zhan81776075/The-Journey-of-a-Software-Engineer/assets/39268323/df403950-2031-4bcb-9170-19b22ada2de7)
 
 ### 2.5.2 Ending A Session
 Session在Connection关闭或中断时自动结束。Session在任一端点选择结束Session时明确结束。当Session明确结束时，会发送一个结束帧，宣布endpoint与其outgoing channel解除关联，并在相关情况下携带错误信息。
+
 ![image](https://github.com/zhan81776075/The-Journey-of-a-Software-Engineer/assets/39268323/93919ef0-0d01-4b16-94d5-7fbf06621c39)
 
 (1) At this point the session endpoint is disassociated from the outgoing channel on A, and the incoming channel on B.
@@ -117,10 +119,12 @@ Session在Connection关闭或中断时自动结束。Session在任一端点选�
 
 ### 2.5.3 Simultaneous End
 由于Session可能是异步的，因此两个peer有可能同时决定结束session。如果出现这种情况，在每个peer看来，其伙伴(their partner)自发启动的结束帧实际上是对等方初始结束帧的应答。
+
 ![image](https://github.com/zhan81776075/The-Journey-of-a-Software-Engineer/assets/39268323/d01217e0-b03a-4a3c-bebd-46420ee2e6cd)
 
 ### 2.5.4 Session Errors
 当Session无法处理输入时，它必须发出带有适当错误信息的结束帧（END）来说明问题的原因。然后，Session必须丢弃所有remote endpoint传入的帧，直到听到remote endpoint相应的结束帧。
+
 ![image](https://github.com/zhan81776075/The-Journey-of-a-Software-Engineer/assets/39268323/d19d863f-06d5-4b4d-8842-75a8377f46be)
 
 ### 2.5.5 Session States
