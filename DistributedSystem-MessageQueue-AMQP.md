@@ -137,8 +137,8 @@ Session在Connection关闭或中断时自动结束。Session在任一端点选�
 | END SENT    | In the END SENT state, the Session endpoint has an entry in the incoming channel map, but is no longer assigned an outgoing channel number. The endpoint may receive frames, but cannot send them. |
 | END RCVD    | In the END RCVD state, the Session endpoint is assigned an outgoing channel number, but there is no entry in the incoming channel map. The endpoint may send frames, but cannot receive them. |
 | DISCARDING   | The DISCARDING state is a variant of the END SENT state where the end is triggered by an error. In this case any incoming frames on the session MUST be silently discarded until the peer’s end frame is received. |
-![image](https://github.com/zhan81776075/The-Journey-of-a-Software-Engineer/assets/39268323/176ce085-0a9a-476f-89c6-eeb5eb07363b)
 
+![image](https://github.com/zhan81776075/The-Journey-of-a-Software-Engineer/assets/39268323/176ce085-0a9a-476f-89c6-eeb5eb07363b)
 当Session端点处于 UNMAPPED 状态时，没有义务保留该Session endpoint，即 UNMAPPED 状态等同于NONEXISTENT状态。
 
 # AMQP问题
