@@ -142,6 +142,23 @@ Session在Connection关闭或中断时自动结束。Session在任一端点选�
 
 当Session端点处于 UNMAPPED 状态时，没有义务保留该Session endpoint，即 UNMAPPED 状态等同于NONEXISTENT状态。
 
+### 2.5.6	Session Flow Control
+The Session Endpoint从Session作用域序列中为每个传出传输Frame分配一个隐式传输标识。每个The Session Endpoint维护以下状态，以管理传入和传出的传输Frame：
+| Flow Control States      | Description |
+| ----------- | ----------- |
+| next-incoming-id   | The next-incoming-id identifies the implicit transfer-id of the next incoming transfer frame. |
+| incoming-window    | The incoming-window defines the maximum number of incoming transfer frames that the endpoint can currently receive. This identifies a current max- imum incoming transfer-id that can be computed by subtracting one from the sum of incoming-window and next-incoming-id. |
+| next-outgoing-id   | The next-outgoing-id is used to assign a unique transfer-id to all outgoing trans- fer frames on a given session. The next-outgoing-id may be initialized to an arbitrary value and is incremented after each successive transfer according to RFC-1982 serial number arithmetic. |
+| outgoing-window    | The outgoing-window defines the maximum number of outgoing transfer frames that the endpoint can currently send. This identifies a current maximum out-going transfer-id that can be computed by subtracting one from the sum of outgoing-window and next-outgoing-id. |
+| remote-incoming-window | The remote-incoming-window reflects the maximum number of outgoing trans- fers that can be sent without exceeding the remote endpoint’s incoming-window. This value MUST be decremented after every transfer frame is sent, and recomputed when informed of the remote session endpoint state. |
+| remote-outgoing-window | The remote-outgoing-window reflects the maximum number of incoming trans- fers that may arrive without exceeding the remote endpoint’s outgoing-window. This value MUST be decremented after every incoming transfer frame is received, and recomputed when informed fo the remote session endpoint state. When this window shrinks, it is an indication of outstanding transfers. Settling outstanding transfers may cause the window to grow. |
+
+初始化后，该状态会根据Session及其相关link生命周期中发生的各种事件进行更新：
+
+| sending a transfer  | Upon sending a transfer, the sending endpoint will increment its next-outgoing- id, decrement its remote-incoming-window, and may (depending on policy) decrement its outgoing-window. |
+| receiving a transfer| Upon receiving a transfer, the receiving endpoint will increment the next- incoming-id to match the implicit transfer-id of the incoming transfer plus one, as well as decrementing the remote-outgoing-window, and may (depending on policy) decrement its incoming-window. |
+| receiving a flow    | When the endpoint receives a flow frame from its peer, it MUST update the next-incoming-id directly from the next-outgoing-id of the frame, as well as copy the remote-outgoing-window directly from the outgoing-window of the frame. The remote-incoming-window is computed as follows: next-incoming-idflow + incoming-windowflow - next-outgoing-idendpoint. If the next-incoming-id field of the flow frame is not set, then remote-incoming- window is computed as follows: initial-outgoing-idendpoint + incoming-windowflow - next-outgoing-idendpoint |
+
 # AMQP问题
 ## Q: AMQP协议的目标是什么?
 AMQP是用于业务消息传递的Internet协议
