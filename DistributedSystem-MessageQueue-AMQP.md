@@ -155,6 +155,8 @@ The Session Endpoint从Session作用域序列中为每个传出传输Frame分配
 
 初始化后，该状态会根据Session及其相关link生命周期中发生的各种事件进行更新：
 
+| Flow Control Event      | Description |
+| ----------- | ----------- |
 | sending a transfer  | Upon sending a transfer, the sending endpoint will increment its next-outgoing- id, decrement its remote-incoming-window, and may (depending on policy) decrement its outgoing-window. |
 | receiving a transfer| Upon receiving a transfer, the receiving endpoint will increment the next- incoming-id to match the implicit transfer-id of the incoming transfer plus one, as well as decrementing the remote-outgoing-window, and may (depending on policy) decrement its incoming-window. |
 | receiving a flow    | When the endpoint receives a flow frame from its peer, it MUST update the next-incoming-id directly from the next-outgoing-id of the frame, as well as copy the remote-outgoing-window directly from the outgoing-window of the frame. The remote-incoming-window is computed as follows: next-incoming-idflow + incoming-windowflow - next-outgoing-idendpoint. If the next-incoming-id field of the flow frame is not set, then remote-incoming- window is computed as follows: initial-outgoing-idendpoint + incoming-windowflow - next-outgoing-idendpoint |
